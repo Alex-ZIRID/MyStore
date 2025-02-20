@@ -1,0 +1,57 @@
+.checkout-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff; 
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-container form div {
+  margin-bottom: 16px;
+}
+
+.checkout-container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-container input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #33B5E5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.checkout-container button:disabled {
+  background-color: #ccc;
+}
+
+.disclaimer {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+}

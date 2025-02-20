@@ -1,0 +1,27 @@
+<div *ngIf="notificationMessage" class="notification">
+  {{ notificationMessage }}
+</div>
+
+<div class="product-list">
+  <div *ngFor="let product of products" class="product-card">
+    <!-- Wrap the image with a router link to open product detail -->
+    <a [routerLink]="['/product', product.id]">
+      <img [src]="product.imageUrl" [alt]="product.name" />
+    </a>
+
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>${{ product.price }}</p>
+
+    <select #qty>
+      <option *ngFor="let n of [1, 2, 3, 4, 5]" [value]="n">{{ n }}</option>
+    </select>
+
+    <button
+      (click)="addToCart(product, +qty.value)"
+      [ngClass]="{ added: addedProductIds.includes(product.id) }"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>

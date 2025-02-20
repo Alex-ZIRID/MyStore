@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "External Hard Drive",
+      "description": "A portable SSD for secure, high-speed data storage and easy backups.",
+      "price": 89.99,
+      "imageUrl": "assets/External Hard Drive.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Laptop Stand",
+      "description": "A sleek, angled stand to improve laptop ergonomics and cooling airflow.",
+      "price": 39.99,
+      "imageUrl": "assets/Laptop Stand.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Wireless Speaker",
+        "description": "A compact Bluetooth speaker for high-quality sound on the go.",
+        "price": 69.99,
+        "imageUrl": "assets/Wireless Speaker.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ergonomic Keyboard",
+      "description": "A split, curved design to reduce wrist strain and boost typing comfort.",
+      "price": 79.99,
+      "imageUrl": "assets/Ergonomic Keyboard.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Wireless Mouse",
+      "description": "A contoured wireless mouse with adjustable sensitivity for smooth navigation.",
+      "price": 49.99,
+      "imageUrl": "assets/Wireless Mouse.jpg"
+    },
+    {
+     
+      "id": 6,
+      "name": "Router",
+      "description": "A reliable dual-band Wi-Fi router offering stable connectivity for home or office.",
+      "price": 59.99,
+      "imageUrl": "assets/Router.jpg"
+    }
+  ]

@@ -1,0 +1,96 @@
+/* Main cart container */
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 2rem auto;
+  max-width: 1024px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.cart h2 {
+  margin-bottom: 1.5rem;
+}
+
+/* Notification message style */
+.notification {
+  background-color: #f0f9ff;
+  border: 1px solid #33B5E5;
+  color: #002244;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* White card for each cart item */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+/* Product image sizing */
+.cart-item img {
+  width: 200px;      
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+/* Cart item text details */
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Remove button: red tone */
+.cart-item button {
+  background-color: #e74c3c; 
+  border: none;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  height: 36px;
+  margin-top: 0.5rem;
+}
+
+.cart-item button:hover {
+  background-color: #c0392b; 
+}
+
+/* Summary area for total and checkout */
+.cart-summary {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Checkout button: green tone */
+.cart-summary button {
+  background-color: #27ae60;
+  border: none;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  height: 36px;
+}
+
+.cart-summary button:hover {
+  background-color: #219150; 
+}

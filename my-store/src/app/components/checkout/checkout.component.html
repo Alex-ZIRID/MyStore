@@ -1,0 +1,69 @@
+<div class="checkout-container">
+  <h2>Checkout</h2>
+  <form (ngSubmit)="onSubmit()" #checkoutForm="ngForm">
+    <div>
+      <label for="fullName">Full Name</label>
+      <input
+        id="fullName"
+        name="fullName"
+        [(ngModel)]="shippingDetails.fullName"
+        required
+      />
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input
+        id="address"
+        name="address"
+        [(ngModel)]="shippingDetails.address"
+        required
+      />
+    </div>
+    <div>
+      <label for="city">City</label>
+      <input
+        id="city"
+        name="city"
+        [(ngModel)]="shippingDetails.city"
+        required
+      />
+    </div>
+    <div>
+      <label for="zipCode">ZIP Code</label>
+      <input
+        id="zipCode"
+        name="zipCode"
+        [(ngModel)]="shippingDetails.zipCode"
+        required
+      />
+    </div>
+    <div>
+      <label for="creditCardNumber">Credit Card Number</label>
+      <input
+        id="creditCardNumber"
+        name="creditCardNumber"
+        [(ngModel)]="shippingDetails.creditCardNumber"
+        required
+      />
+    </div>
+    <div>
+      <label for="expirationDate">Expiration Date</label>
+      <input
+        id="expirationDate"
+        name="expirationDate"
+        [(ngModel)]="shippingDetails.expirationDate"
+        required
+      />
+    </div>
+    <div>
+      <label for="cvv">CVV</label>
+      <input id="cvv" name="cvv" [(ngModel)]="shippingDetails.cvv" required />
+      <p class="disclaimer">
+        <em>We do not share your payment details with other parties.</em>
+      </p>
+    </div>
+    <button type="submit" [disabled]="!checkoutForm.form.valid">
+      Submit Order
+    </button>
+  </form>
+</div>
