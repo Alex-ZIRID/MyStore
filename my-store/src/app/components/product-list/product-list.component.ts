@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';  // Import RouterLink
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 import { CartService } from '../../services/cart.service';
+import { ProductCardComponent } from '../product-card/product-card.component';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
   imports: [
     CommonModule,
-    RouterLink // Include RouterLink so [routerLink] is recognized
+    ProductCardComponent 
   ],
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
@@ -18,7 +18,6 @@ import { CartService } from '../../services/cart.service';
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
   notificationMessage: string = '';
-  addedProductIds: number[] = [];
 
   constructor(
     private productService: ProductService,
@@ -32,14 +31,9 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  addToCart(product: Product, quantity: number = 1): void {
-    this.cartService.addToCart(product, quantity);
+  onAddToCart(event: { product: Product, quantity: number }): void {
+    this.cartService.addToCart(event.product, event.quantity);
     this.notificationMessage = "Product Added to the Cart";
     setTimeout(() => this.notificationMessage = '', 3000);
-
-    this.addedProductIds.push(product.id);
-    setTimeout(() => {
-      this.addedProductIds = this.addedProductIds.filter(id => id !== product.id);
-    }, 2000);
   }
 }

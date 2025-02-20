@@ -4,13 +4,13 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #fff; 
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .checkout-container h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .checkout-container form div {
@@ -21,7 +21,6 @@
   display: block;
   font-weight: bold;
   margin-bottom: 4px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .checkout-container input {
@@ -30,7 +29,6 @@
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .checkout-container button {
@@ -42,16 +40,20 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .checkout-container button:disabled {
   background-color: #ccc;
 }
 
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
 .disclaimer {
   margin-top: 4px;
   font-size: 0.85rem;
   color: #555;
-  font-family: 'Montserrat', sans-serif;
 }

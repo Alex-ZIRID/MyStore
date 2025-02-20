@@ -8,7 +8,12 @@
         name="fullName"
         [(ngModel)]="shippingDetails.fullName"
         required
+        minlength="5"
+        #fullName="ngModel"
       />
+      <div class="error" *ngIf="fullName.invalid && fullName.touched">
+        Full Name is required (minimum 5 characters).
+      </div>
     </div>
     <div>
       <label for="address">Address</label>
@@ -17,7 +22,12 @@
         name="address"
         [(ngModel)]="shippingDetails.address"
         required
+        minlength="5"
+        #address="ngModel"
       />
+      <div class="error" *ngIf="address.invalid && address.touched">
+        Address is required (minimum 5 characters).
+      </div>
     </div>
     <div>
       <label for="city">City</label>
@@ -26,7 +36,11 @@
         name="city"
         [(ngModel)]="shippingDetails.city"
         required
+        #city="ngModel"
       />
+      <div class="error" *ngIf="city.invalid && city.touched">
+        City is required.
+      </div>
     </div>
     <div>
       <label for="zipCode">ZIP Code</label>
@@ -35,7 +49,12 @@
         name="zipCode"
         [(ngModel)]="shippingDetails.zipCode"
         required
+        pattern="^[0-9]{5}(?:-[0-9]{4})?$"
+        #zipCode="ngModel"
       />
+      <div class="error" *ngIf="zipCode.invalid && zipCode.touched">
+        Enter a valid ZIP Code.
+      </div>
     </div>
     <div>
       <label for="creditCardNumber">Credit Card Number</label>
@@ -44,7 +63,15 @@
         name="creditCardNumber"
         [(ngModel)]="shippingDetails.creditCardNumber"
         required
+        pattern="^[0-9]{16}$"
+        #creditCardNumber="ngModel"
       />
+      <div
+        class="error"
+        *ngIf="creditCardNumber.invalid && creditCardNumber.touched"
+      >
+        Enter a valid 16-digit credit card number.
+      </div>
     </div>
     <div>
       <label for="expirationDate">Expiration Date</label>
@@ -53,16 +80,35 @@
         name="expirationDate"
         [(ngModel)]="shippingDetails.expirationDate"
         required
+        placeholder="MM/YY"
+        pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$"
+        #expirationDate="ngModel"
       />
+      <div
+        class="error"
+        *ngIf="expirationDate.invalid && expirationDate.touched"
+      >
+        Enter a valid expiration date (MM/YY).
+      </div>
     </div>
     <div>
       <label for="cvv">CVV</label>
-      <input id="cvv" name="cvv" [(ngModel)]="shippingDetails.cvv" required />
+      <input
+        id="cvv"
+        name="cvv"
+        [(ngModel)]="shippingDetails.cvv"
+        required
+        pattern="^[0-9]{3,4}$"
+        #cvv="ngModel"
+      />
+      <div class="error" *ngIf="cvv.invalid && cvv.touched">
+        Enter a valid CVV (3 or 4 digits).
+      </div>
       <p class="disclaimer">
         <em>We do not share your payment details with other parties.</em>
       </p>
     </div>
-    <button type="submit" [disabled]="!checkoutForm.form.valid">
+    <button type="submit" [disabled]="checkoutForm.invalid">
       Submit Order
     </button>
   </form>

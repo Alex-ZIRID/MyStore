@@ -1,0 +1,16 @@
+<div class="product-card">
+  <a [routerLink]="['/product', product.id]">
+    <img [src]="product.imageUrl" [alt]="product.name" />
+  </a>
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <p>$ {{ product.price }}</p>
+
+  <select #qty>
+    <option *ngFor="let n of [1, 2, 3, 4, 5]" [value]="n">{{ n }}</option>
+  </select>
+
+  <button (click)="addToCart(+qty.value)" [ngClass]="{ added: added }">
+    Add to Cart
+  </button>
+</div>
